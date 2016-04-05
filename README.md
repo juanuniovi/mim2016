@@ -1,1 +1,1 @@
-# repositorio de la asignatura de control de mim 2016. Versiones en python y matlab.
+Repositorio de la asignatura de ingeniería de sistemas del mim 2016. Versiones en python (.py) y matlab (.m).
