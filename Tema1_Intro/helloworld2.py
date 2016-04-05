@@ -4,12 +4,16 @@ Created on Thu Feb 18 11:41:44 2016
 
 @author: isa_uniovi
 """
-
+import time
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
+
 # Hola mundo !
-print('Hola')
+print('Hola, leeremos datos de un archivo y haremos un plot con la lib matplotlib...')
+print('...también guardamos las figuras en archivos.')
 
 # Abrir archivo de datos
 f1='../Datos/Xsens/Antebrazo50copia.txt';
@@ -49,8 +53,15 @@ gyr1=np.array([gyrx,gyry,gyrz])
 plt.figure()
 plt.ion()
 plt.plot(acc1.T)
+plt.show()
+plt.savefig('accels.png') # guardamos la figura en un archivo
+
+#%% plots varios
+plt.figure()
+plt.ion()
 plt.plot(gyr1.T)
 plt.show()
+plt.savefig('gyros.png') # guardamos la figura en un archivo
 
 #%% Media de las primeras aceleraciones
 medias=np.mean(acc1, axis=1)  
@@ -60,6 +71,5 @@ print('Medias de acelerómetros:' + str(medias))
 medias=np.mean(gyr1, axis=1)  
 print('Medias de giróscopos:' + str(medias))
 
-#en el mac no va esto:
-#raw_input("Press enter to finish...")
-
+#pausa antes de cerrar las ventanas
+input("Press Enter to continue...")

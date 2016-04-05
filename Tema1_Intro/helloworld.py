@@ -9,7 +9,7 @@ import numpy as np
 
 
 # Hola mundo !
-print('Hola')
+print('Hola mundo, leeremos datos de un archivo...')
 
 # Abrir archivo de datos
 f1='../Datos/Xsens/Antebrazo50copia.txt';
@@ -18,6 +18,8 @@ fID1 = open(f1,'r');
 data1 = np.loadtxt(fID1)
 (numfilas,numcols)=data1.shape
 print('Matriz con ' + str(numfilas) + ' filas y ' + str(numcols) + ' columnas.')
+
+b=data1[:,7]
 
 #Close the text file
 fID1.close()
